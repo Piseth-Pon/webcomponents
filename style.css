@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+:root {
+  --bg_color: darkblue;
+  --txt_color: whitesmoke;
+}
+
+.dark_theme {
+  --bg_color: lightgray;
+  --txt_color: darkblue;
+}
+
+body {
+  background-color: var(--bg_color);
+  color: var(--txt_color);
+}
+
+/* SideNav Menu */
+header {
+  margin: 15px;
+  padding: 15px;
+  background-color: rgba(0,0,0,0.5);
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu {
+  position: fixed;
+  z-index: 99;
+  background-color: rgba(0,0,0,0.85);
+  padding: 15px;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  
+  display: grid;
+  place-content: center;
+  gap: 25px;
+
+  transition: all 500ms;
+}
+
+.menu a {
+  border: 2px solid white;
+  text-align: center;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.menu-toggle {
+  right: -100%;
+}
+
+/* Modal */
+.modal-form {
+  margin: 15px;
+  padding: 15px;
+  background-color: rgba(0,0,0,0.5);
+  position: relative;
+}
+
+.modal {
+  background-color: rgba(0,0,0, 0.5);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+
+  transition: all 500ms;
+
+  display: grid;
+  place-content: center;
+}
+
+.modal-wrapper {
+  width: 300px;
+  height: 300px;
+  background-color: lightcoral;
+  text-align: center;
+  padding: 25px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 25px;
+
+  transform: translateY(-50px);
+  transition: all 250ms;
+}
+
+.hide-modal {
+  display: none;
+}
+
+
+/* Tabbar */
+#tabbar {
+  padding: 15px;
+  margin: 15px;
+  background-color: rgba(0,0,0,0.5);
+  height: 300px;
+
+  display: grid;
+  grid-auto-rows: auto 1fr;
+  gap: 15px;
+}
+
+.tab-btn {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.tab-btn.active {
+  background-color: lightcoral;
+}
+
+.content {
+  border: 2px solid white;
+  height: 100%;
+
+  display: none;
+}
+
+.content.active {
+  display: block;
+}
+
+/* Accordion */
+#accordion {
+  padding: 15px;
+  margin: 15px;
+  background-color: rgba(0,0,0,0.5);
+  /* display: grid;
+  gap: 5px; */
+}
+
+.accordion-header {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
+  padding: 10px;
+}
+
+.accordion-body {
+  height: 0px;
+  overflow: hidden;
+  border: 2px solid white;
+
+  transition: all 500ms;
+}
+
+.accordion-body.show {
+  height: 150px;
+  background-color: lightseagreen;
+}
+
+/* Navbar */
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar {
+  margin: 15px;
+  padding: 15px;
+  background-color: rgba(0,0,0,0.5);
+
+  position: relative;
+  
+  display: flex;
+}
+
+.navbar-nav {
+  margin-left: auto;
+  display: flex;
+  gap: 15px;
+}
+
+.navbar-nav a:hover {
+  background-color: brown;
+}
+
+.dropdown-menu {
+  background-color: lightcoral;
+  position: absolute;
+  right: 70px;
+  top: 50px;
+  width: 150px;
+  z-index: 999;
+
+  display: grid;
+  gap: 15px;
+  padding: 15px;
+}
+
+.toggle {
+  display: none;
+}
+
+/* Carousel */
+.carousel {
+  position: relative;
+  padding: 15px;
+  background-color: rgba(0,0,0,0.25);
+}
+
+.carousel-item {
+  width: 90%;
+  height: 300px;
+  margin: auto;
+  display: none;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-item.show {
+  display: block;
+}
+
+.prev-btn, .next-btn {
+  background-color: rgba(0,0,0,0.25);
+  border: 0;
+  padding: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: gray;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.prev-btn {
+  left: 0;
+  margin-left: 15px;
+}
+
+.next-btn {
+  right: 0;
+  margin-right: 15px;
+}
+
+.prev-btn:active,
+.next-btn:active {
+  background-color: whitesmoke;
+}

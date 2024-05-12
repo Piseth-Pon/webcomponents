@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Nav Menu -->
+  <header>
+    <a href="#">LOGO</a>
+
+    <button id="menuBtn">MENU</button>
+
+    <nav id="menu" class="menu menu-toggle">
+      <a href="#">HOME</a>
+      <a href="#">ABOUT</a>
+      <a href="#">CONTACT</a>
+
+      <button id="closeBtn">X</button>
+    </nav>
+  </header>
+
+
+  <!-- Modal -->
+  <section class="wrapper">
+    <button id="openModalBtn">Open Modal</button>
+    <section id="modal-form" class="modal-form hide-modal">
+
+      <div class="modal" id="modal">
+        <div class="modal-wrapper">
+          <h4>MODAL HEADER</h4>
+          <p>Something in modal</p>
+          <div class="modal-btn">
+            <button id="confirmBtn">Confirm</button>
+            <button id="cancelBtn">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+
+  <!-- Tabbar -->
+  <section id="tabbar">
+
+    <div class="btn-group">
+      <button class="tab-btn active" data-page="profile">PROFILE</button>
+      <button class="tab-btn" data-page="blog">BLOG</button>
+      <button class="tab-btn" data-page="contact">CONTACT</button>
+    </div>
+
+
+    <div class="content-wrapper">
+
+      <div class="content active" id="profile">
+        PROFILE PAGE
+      </div>
+
+      <div class="content" id="blog">
+        BLOG PAGE
+      </div>
+
+      <div class="content" id="contact">
+        CONTACT PAGE
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Accordion -->
+  <section id="accordion">
+
+    <div class="accordion-item">
+      <button class="accordion-header">Question1</button>
+      <div class="accordion-body">
+        ANSWER1
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">Question2</button>
+      <div class="accordion-body">
+        ANSWER2
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">Question3</button>
+      <div class="accordion-body">
+        ANSWER3
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- Dark/Light Mode Toggle -->
+  <button class="toggleTheme">Theme</button>
+
+
+  <!-- Dropdown Menu -->
+  <nav class="navbar">
+
+    <a href="#" class="nav-brand">CCKH</a>
+
+    <div class="navbar-nav">
+      <a href="#">HOME</a>
+      <a role="button" href="#" data-menu="dropdown">DROPDOWN &downarrow;</a>
+      <a href="#">CONTACT</a>
+    </div>
+
+    <div id="dropdown" class="dropdown-menu toggle">
+      <a href="#">PROFILE</a>
+      <a href="#">BLOG</a>
+      <a href="#">PORFOLLIO</a>
+    </div>
+
+  </nav>
+
+
+  <!-- Carousel -->
+  <div class="carousel">
+
+    <div class="carousel-item show">
+      <img src="./game.png" alt="">
+    </div>
+
+    <div class="carousel-item">
+      <img src="./safe.png" alt="">
+    </div>
+
+    <div class="carousel-item">
+      <img src="./submarine.png" alt="">
+    </div>
+
+    <button class="prev-btn">&lt;</button>
+    <button class="next-btn">&gt;</button>
+
+  </div>
+
+
+
+
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
